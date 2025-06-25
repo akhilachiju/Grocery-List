@@ -98,3 +98,22 @@ function toggleClearButton() {
     const hasItems = itemList.querySelector('.item');
     clearButton.classList.toggle('hidden', !hasItems);
 }
+
+// Save items to localStorage
+function saveItemsToStorage() {
+    const items = Array.from(document.querySelectorAll('.item .title')).map(p => p.textContent);
+    localStorage.setItem('grocery-items', JSON.stringify(items));
+}
+
+// Load items from localStorage
+function loadItemsFromStorage() {
+    const storedItems = JSON.parse(localStorage.getItem('grocery-items') || '[]');
+    storedItems.forEach(text => {
+        const itemBox = createItemBox(text);
+        itemList.insertBefore(itemBox, clearButton);
+    });
+    toggleClearButton();
+}
+
+// Load stored items on page load
+window.addEventListener('DOMContentLoaded', loadItemsFromStorage);
