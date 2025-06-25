@@ -7,6 +7,8 @@ Project features: - Add grocery items - Edit existing items - Delete individual 
 Project technologies used: - HTML5 - CSS3 - JavaScript (Vanilla) - Font Awesome - Google Fonts (Poppins) - Local Storage API
 
 Folder structure:
+
+```bash
 project-root/
 │
 ├── index.html
@@ -15,3 +17,4 @@ project-root/
 ├── image/
 │ └── banner.jpg
 └── README.md
+```
