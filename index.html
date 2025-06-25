@@ -4,12 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grocery Bud</title>
+    <meta name="description" content="A simple and intuitive grocery list app.">
+    <title>Grocery Bud - Simple Grocery List App</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
 <body>
+    <main class="app">
+        <div class="container">
+            <form class="form">
+                <p class="alert hidden" aria-live="polite"></p>
+                <header>
+                    <h3>GROCERY BUD</h3>
+                </header>
+                <div class="form-control">
+                    <label for="item-input" class="visually-hidden">Item Name</label>
+                    <input type="text" id="item-input" placeholder="Enter item name" maxlength="30" autocomplete="off" />
+                    <button type="submit" class="btn submit-btn">Submit</button>
+                </div>
+            </form>
+            <div class="items-container">
+                <article class="list" id="item-list">
+                    <button class="btn clear-btn hidden" id="clear-btn">Clear Items</button>
+                </article>
+            </div>
+        </div>
+    </main>
     <script src="script.js"></script>
 </body>
 
