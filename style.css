@@ -175,3 +175,99 @@ input::placeholder {
     justify-content: center;
     transition: background-color 0.3s ease;
 }
+
+
+/* Mobiles (max-width: 480px) */
+@media (max-width: 480px) {
+    html {
+        font-size: 14px;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    .item p {
+        font-size: 0.9rem;
+    }
+
+    .form-control {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .btn.submit-btn {
+        width: 100%;
+    }
+
+    .btn,
+    .clear-btn {
+        padding: 0.75rem 1rem;
+        font-size: 1.1rem;
+    }
+
+    .actions button {
+        font-size: 1.5rem;
+        padding: 0.5rem;
+    }
+}
+
+/* Tablets (width: 769px to 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .container {
+        max-width: 90%;
+        padding: 2rem;
+    }
+
+    .form-control {
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    input {
+        flex: 1;
+    }
+
+    .btn {
+        padding: 0.6rem 1.2rem;
+    }
+
+    .item {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .actions {
+        margin-top: 0;
+    }
+}
+
+/* Desktops (width: 1025px and above) */
+@media (min-width: 1025px) {
+    .container {
+        max-width: 900px;
+        padding: 2.5rem;
+    }
+
+    .form-control {
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    input {
+        flex: 1;
+    }
+
+    .btn {
+        padding: 0.6rem 1.5rem;
+    }
+
+    .item {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .actions {
+        margin-top: 0;
+    }
+}
